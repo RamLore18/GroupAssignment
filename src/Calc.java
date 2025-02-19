@@ -42,4 +42,10 @@ public abstract class Calc extends Operators implements A{
     public ActionListener pi() {
         return null;
     }
+    public ActionListener openParen() {
+        return null;
+    }
+    public ActionListener closeParen() {
+        return null;
+    }
 }

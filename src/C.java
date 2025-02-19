@@ -1,6 +1,7 @@
 import java.awt.event.ActionListener;
 
 // Trig functions
+// Hyperbolic Trig functions
 public interface C {
     public ActionListener sin();
     public ActionListener cos();

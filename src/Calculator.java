@@ -54,10 +54,8 @@ public class Calculator extends Calc{
     private JButton button18;
     private JButton button19;
     private JPanel Calculator;
-    private JLabel exprlabel;
     private JPanel CalculatorP;
     private JButton delButton;
-    private JTextArea textArea1;
 
 
     private String expression="";
@@ -68,7 +66,7 @@ public class Calculator extends Calc{
     private String result="";
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Calculator GROUP 1");
+        JFrame frame = new JFrame("Calculator GROUP 1 Plugin made GUI");
         frame.setContentPane(new Calculator().CalculatorP);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
@@ -106,7 +104,7 @@ public class Calculator extends Calc{
     //operator checking
     private boolean isoperator(String x)
     {
-        if(List.of("+", "-", "x", "/", "sqrt", "^", "!", "sin", "cos", "tan", "ln", "log", "sinh","cosh", "tanh", "%", "Rad", "EE","cbrt","aroot","exp","pow","10^","Del","Rec").contains(x))
+        if(List.of("+", "-", "x", "/", "sqrt", "^", "!", "sin", "cos", "tan", "ln", "log", "sinh","cosh", "tanh", "%", "Rad", "Mod","cbrt","aroot","exp","pow","10^","Del","1/","^2","^3").contains(x))
             return true;
         else
             return false;
@@ -180,7 +178,7 @@ public class Calculator extends Calc{
             case "aroot":
                 res= Math.pow(y, 1/x);
                 break;
-            case "EE":
+            case "Mod":
                 res = Math.IEEEremainder(x, y);
                 break;
             default :
@@ -197,13 +195,13 @@ public class Calculator extends Calc{
                 res = Math.log10(y);
                 break;
             case "sin":
-                res= Math.sin(y);
+                res= Math.sin(Math.toRadians(y));
                 break;
             case "cos":
-                res = Math.cos(y);
+                res = Math.cos(Math.toRadians(y));
                 break;
             case "tan":
-                res =Math.tan(y);
+                res =Math.tan(Math.toRadians(y));
                 break;
             case "sinh":
                 res = Math.sinh(y);
@@ -238,7 +236,13 @@ public class Calculator extends Calc{
             case "!":
                 res=factorial(y);
                 break;
-            case "Rec":
+            case "^2":
+                res= Math.pow(y, 2);
+                break;
+            case "^3":
+                res= Math.pow(y, 3);
+                break;
+            case "1/":
                 res= 1/y;
         }
         return res;
@@ -259,7 +263,7 @@ public class Calculator extends Calc{
         for(String  i:token2) {
             if(isoperator(i)){
                 //if it is unary operator or function
-                if(i.equals("sin") ||i.equals("cos") ||i.equals("tan") ||i.equals("log") || i.equals("ln") || i.equals("sqrt") || i.equals("!") || i.equals("sinh") || i.equals("cosh") || i.equals("tanh") || i.equals("%") || i.equals("Rand") || i.equals("Rad") || i.equals("cbrt") || i.equals("exp") || i.equals("10^") || i.equals("Rec")) {
+                if(i.equals("sin") ||i.equals("cos") ||i.equals("tan") ||i.equals("log") || i.equals("ln") || i.equals("sqrt") || i.equals("!") || i.equals("sinh") || i.equals("cosh") || i.equals("tanh") || i.equals("%") || i.equals("Rand") || i.equals("Rad") || i.equals("cbrt") || i.equals("exp") || i.equals("10^") || i.equals("1/")|| i.equals("^2") || i.equals("^3")) {
                     y=s.pop();
                     s.push(calculate(y,i));
                 }else {
@@ -454,6 +458,28 @@ public class Calculator extends Calc{
         textField1.setText(s);
         return null;
     }
+    public ActionListener openParen(){
+        if(! "0".equals(textField1.getText())) {
+            textField1.setText(textField1.getText()+"(");
+        }else {
+            textField1.setText("(");
+        }
+        expression+=",(";
+        num=false;
+        dot=false;
+        return null;
+    }
+    public ActionListener closeParen(){
+        if(! "0".equals(textField1.getText())) {
+            textField1.setText(textField1.getText()+")");
+        }else {
+            textField1.setText(")");
+        }
+        expression+=",)";
+        num=false;
+        dot=false;
+        return null;
+    }
     //Interface B methods.
     // All functional
     @Override
@@ -582,7 +608,6 @@ public class Calculator extends Calc{
                 s+=i;
             }
         }
-        exprlabel.setText(s+"=");
         textField1.setText(result);
 
         expression = result;
@@ -593,7 +618,7 @@ public class Calculator extends Calc{
     }
 
     // Interface C methods.
-    // Will have to fix the trig functions in time.
+    // Will have to fix the trig functions in time.Done
     //Hyperbolic Trig functions are functional.
     public ActionListener sin(){
         if(! "0".equals(textField1.getText())) {
@@ -741,6 +766,28 @@ public class Calculator extends Calc{
         dot=false;
         return null;
     }
+    public ActionListener square(){
+        if(! "0".equals(textField1.getText())) {
+            textField1.setText(textField1.getText()+"^2");
+        }else {
+            textField1.setText("^2");
+        }
+        expression+=",^2";
+        num=false;
+        dot=false;
+        return null;
+    }
+    public ActionListener cube(){
+        if(! "0".equals(textField1.getText())) {
+            textField1.setText(textField1.getText()+"^3");
+        }else {
+            textField1.setText("^3");
+        }
+        expression+=",^3";
+        num=false;
+        dot=false;
+        return null;
+    }
     //Interface E methods.
     // All functional
     public ActionListener rand(){
@@ -798,18 +845,17 @@ public class Calculator extends Calc{
     }
     public ActionListener EE(){
         if(! "0".equals(textField1.getText())) {
-            textField1.setText(textField1.getText()+"EE");
+            textField1.setText(textField1.getText()+"Mod");
         }else {
-            textField1.setText("EE");
+            textField1.setText("Mod");
         }
-        expression+=",EE";
+        expression+=",Mod";
         num=false;
         dot=false;
         return null;
     }
     public ActionListener C(){
         textField1.setText("");
-        exprlabel.setText("");
         expression ="";
         token.clear();
         result="";
@@ -837,7 +883,7 @@ public class Calculator extends Calc{
         }else {
             textField1.setText("1/x");
         }
-        expression+=",Rec";
+        expression+=",1/";
         num=false;
         dot=false;
         return null;
@@ -892,28 +938,14 @@ public class Calculator extends Calc{
         button18.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(! "0".equals(textField1.getText())) {
-                    textField1.setText(textField1.getText()+"(");
-                }else {
-                    textField1.setText("(");
-                }
-                expression+=",(";
-                num=false;
-                dot=false;
+                openParen();
             }
         });
 
         button19.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(! "0".equals(textField1.getText())) {
-                    textField1.setText(textField1.getText()+")");
-                }else {
-                    textField1.setText(")");
-                }
-                expression+=",)";
-                num=false;
-                dot=false;
+               closeParen();
             }
         });
 
@@ -1126,6 +1158,18 @@ public class Calculator extends Calc{
             @Override
             public void actionPerformed(ActionEvent e) {
                 Rec();
+            }
+        });
+        x3Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cube();
+            }
+        });
+        x2Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                square();
             }
         });
     }

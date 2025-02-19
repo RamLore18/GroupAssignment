@@ -9,6 +9,8 @@ public ActionListener cbrt();
 public ActionListener root();
 public ActionListener pow10();
 public ActionListener exp();
+public ActionListener square();
+public ActionListener cube();
 
 
 }

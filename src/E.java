@@ -2,7 +2,7 @@ import java.awt.event.ActionListener;
 
 //Rand, logs, EE, Rad
 // clear and delete
-//Rec
+//Reciprocal
 public interface E {
 public ActionListener rand();
 public ActionListener log();

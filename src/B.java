@@ -1,6 +1,6 @@
 import java.awt.event.ActionListener;
 
-//Arithmetic operators, =, %, +/-
+//Arithmetic operators, =, %
 public interface B {
     public ActionListener addition();
     public ActionListener subtract();

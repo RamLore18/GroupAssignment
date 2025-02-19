@@ -57,6 +57,12 @@ public abstract class Operators extends BinaryOperators  implements C, D, E{
     public ActionListener exp() {
         return null;
     }
+    public ActionListener square() {
+        return null;
+    }
+    public ActionListener cube() {
+        return null;
+    }
     public ActionListener rad() {
         return null;
     }

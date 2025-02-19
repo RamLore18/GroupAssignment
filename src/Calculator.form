@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Calculator">
-  <grid id="27dc6" binding="CalculatorP" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="CalculatorP" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="878" height="399"/>
+      <xy x="20" y="20" width="907" height="415"/>
     </constraints>
     <properties>
       <background color="-14606302"/>
@@ -15,7 +15,7 @@
       <grid id="2a1c6" binding="Calculator" layout-manager="GridLayoutManager" row-count="6" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="2" vgap="2">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-14606302"/>
@@ -31,7 +31,7 @@
             <properties>
               <background color="-3304159"/>
               <borderPainted value="false"/>
-              <font size="26"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <opaque value="true"/>
               <text value="= "/>
@@ -44,7 +44,7 @@
             <properties>
               <background color="-3304159"/>
               <borderPainted value="false"/>
-              <font size="26"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="x"/>
             </properties>
@@ -56,7 +56,7 @@
             <properties>
               <background color="-3304159"/>
               <borderPainted value="false"/>
-              <font size="26"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="-"/>
             </properties>
@@ -68,7 +68,7 @@
             <properties>
               <background color="-3304159"/>
               <borderPainted value="false"/>
-              <font size="26"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="&lt;html&gt;&lt;body&gt;&lt;span&gt;÷&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;"/>
             </properties>
@@ -81,7 +81,7 @@
               <background color="-13355463"/>
               <borderPainted value="false"/>
               <enabled value="true"/>
-              <font size="24"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="%"/>
             </properties>
@@ -93,7 +93,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="24"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="+/-"/>
             </properties>
@@ -105,21 +105,9 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="28"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="C"/>
-            </properties>
-          </component>
-          <component id="af458" class="javax.swing.JButton" binding="a9Button" default-binding="true">
-            <constraints>
-              <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-10526622"/>
-              <borderPainted value="false"/>
-              <font size="24"/>
-              <foreground color="-460289"/>
-              <text value="9"/>
             </properties>
           </component>
           <component id="e28f5" class="javax.swing.JButton" binding="a6Button" default-binding="true">
@@ -129,7 +117,7 @@
             <properties>
               <background color="-10526622"/>
               <borderPainted value="false"/>
-              <font size="24"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="6"/>
             </properties>
@@ -141,7 +129,7 @@
             <properties>
               <background color="-10526622"/>
               <borderPainted value="false"/>
-              <font size="24"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="3"/>
             </properties>
@@ -153,7 +141,7 @@
             <properties>
               <background color="-10526622"/>
               <borderPainted value="false"/>
-              <font size="28"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="."/>
             </properties>
@@ -165,7 +153,7 @@
             <properties>
               <background color="-10526622"/>
               <borderPainted value="false"/>
-              <font size="24"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="8"/>
             </properties>
@@ -177,7 +165,7 @@
             <properties>
               <background color="-10526622"/>
               <borderPainted value="false"/>
-              <font size="24"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="5"/>
             </properties>
@@ -189,7 +177,7 @@
             <properties>
               <background color="-10526622"/>
               <borderPainted value="false"/>
-              <font size="24"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="2"/>
             </properties>
@@ -201,7 +189,7 @@
             <properties>
               <background color="-10526622"/>
               <borderPainted value="false"/>
-              <font size="24"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="0"/>
             </properties>
@@ -226,7 +214,7 @@
             <properties>
               <background color="-10526622"/>
               <borderPainted value="false"/>
-              <font size="24"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="4"/>
             </properties>
@@ -239,7 +227,7 @@
               <background color="-10526622"/>
               <borderPainted value="false"/>
               <enabled value="true"/>
-              <font size="24"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="1"/>
             </properties>
@@ -256,7 +244,7 @@
               <defaultCapable value="true"/>
               <focusPainted value="true"/>
               <focusTraversalPolicyProvider value="false"/>
-              <font size="26"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <inheritsPopupMenu value="false"/>
               <margin top="0" left="0" bottom="0" right="0"/>
@@ -272,9 +260,9 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
-              <text value="&lt;html&gt;&lt;body&gt;&lt;span&gt;10&lt;sup&gt;x&lt;/sup&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;"/>
+              <text value="10ˣ"/>
             </properties>
           </component>
           <component id="f0ec3" class="javax.swing.JButton" binding="log10Button" default-binding="true">
@@ -284,9 +272,9 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
-              <text value="&lt;html&gt;&lt;body&gt;&lt;span&gt;log&lt;sub&gt;10&lt;/sub&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;"/>
+              <text value="log"/>
             </properties>
           </component>
           <component id="71e98" class="javax.swing.JButton" binding="EEButton" default-binding="true">
@@ -296,9 +284,9 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
-              <text value="EE"/>
+              <text value="Mod"/>
             </properties>
           </component>
           <component id="f7aad" class="javax.swing.JButton" binding="randButton" default-binding="true">
@@ -308,7 +296,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="Rand"/>
             </properties>
@@ -320,9 +308,9 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30"/>
               <foreground color="-460289"/>
-              <text value="&lt;html&gt;&lt;body&gt;&lt;span&gt;e&lt;sup&gt;x&lt;/sup&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;"/>
+              <text value="eˣ"/>
             </properties>
           </component>
           <component id="e63f7" class="javax.swing.JButton" binding="lnButton" default-binding="true">
@@ -332,7 +320,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="ln"/>
             </properties>
@@ -344,7 +332,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="e"/>
             </properties>
@@ -356,7 +344,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="π"/>
             </properties>
@@ -368,9 +356,9 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
-              <text value="&lt;html&gt;&lt;body&gt;&lt;span&gt;X&lt;sup&gt;y&lt;/sup&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;"/>
+              <text value="xʸ"/>
             </properties>
           </component>
           <component id="c79d7" class="javax.swing.JButton" binding="ʸXButton" default-binding="true">
@@ -380,7 +368,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="ʸ√x"/>
             </properties>
@@ -392,7 +380,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="Tan"/>
             </properties>
@@ -404,7 +392,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="tanh"/>
             </properties>
@@ -416,9 +404,9 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
-              <text value="&lt;html&gt;&lt;body&gt;&lt;span&gt;X&lt;sup&gt;3&lt;/sup&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;"/>
+              <text value="x³"/>
             </properties>
           </component>
           <component id="51b48" class="javax.swing.JButton" binding="xButton2" default-binding="true">
@@ -428,7 +416,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="³√x"/>
             </properties>
@@ -440,7 +428,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="Cos"/>
             </properties>
@@ -452,7 +440,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="cosh"/>
             </properties>
@@ -464,22 +452,10 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <hideActionText value="false"/>
-              <text value="&lt;html&gt;&lt;body&gt;&lt;span&gt;X&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;"/>
-            </properties>
-          </component>
-          <component id="d1029" class="javax.swing.JButton" binding="xButton3" default-binding="true">
-            <constraints>
-              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-13355463"/>
-              <borderPainted value="false"/>
-              <font size="17"/>
-              <foreground color="-460289"/>
-              <text value="²√x"/>
+              <text value="x²"/>
             </properties>
           </component>
           <component id="aeaa5" class="javax.swing.JButton" binding="sinButton" default-binding="true">
@@ -489,7 +465,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="Sin"/>
             </properties>
@@ -501,7 +477,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="sinh"/>
             </properties>
@@ -513,9 +489,9 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
-              <text value="&lt;html&gt;&lt;body&gt;&lt;span&gt;2&lt;sup&gt;nd&lt;/sup&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;"/>
+              <text value="2nd"/>
             </properties>
           </component>
           <component id="e0d5e" class="javax.swing.JButton" binding="a1XButton" default-binding="true">
@@ -525,7 +501,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="1/x"/>
             </properties>
@@ -537,7 +513,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="X!"/>
             </properties>
@@ -549,7 +525,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="Rad"/>
             </properties>
@@ -561,7 +537,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="17"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value="("/>
             </properties>
@@ -574,7 +550,7 @@
               <background color="-13355463"/>
               <borderPainted value="false"/>
               <contentAreaFilled value="true"/>
-              <font size="17"/>
+              <font size="30"/>
               <foreground color="-460289"/>
               <text value=")"/>
             </properties>
@@ -586,7 +562,7 @@
             <properties>
               <background color="-13355463"/>
               <borderPainted value="false"/>
-              <font size="24"/>
+              <font size="30" style="0"/>
               <foreground color="-460289"/>
               <text value="Del"/>
             </properties>
@@ -598,24 +574,41 @@
               </grid>
             </constraints>
             <properties>
+              <alignmentX value="0.5"/>
               <background color="-14606302"/>
               <font size="72" style="1"/>
               <foreground color="-460289"/>
               <horizontalAlignment value="4"/>
+              <margin top="2" left="9" bottom="2" right="6"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="af458" class="javax.swing.JButton" binding="a9Button" default-binding="true">
+            <constraints>
+              <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-10526622"/>
+              <borderPainted value="false"/>
+              <font size="30"/>
+              <foreground color="-460289"/>
+              <text value="9"/>
+            </properties>
+          </component>
+          <component id="d1029" class="javax.swing.JButton" binding="xButton3" default-binding="true">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13355463"/>
+              <borderPainted value="false"/>
+              <font size="30" style="0"/>
+              <foreground color="-460289"/>
+              <text value="²√x"/>
             </properties>
           </component>
         </children>
       </grid>
-      <component id="d2533" class="javax.swing.JLabel" binding="exprlabel">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Yu Gothic UI Light" size="20" style="1"/>
-          <foreground color="-460289"/>
-          <text value=""/>
-        </properties>
-      </component>
     </children>
   </grid>
 </form>

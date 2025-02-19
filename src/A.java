@@ -1,6 +1,7 @@
 import java.awt.event.ActionListener;
 
 //Numbers, decimal point and ().
+//Constants e and pi
 public interface A {
     public ActionListener zero();
     public ActionListener one();
@@ -15,4 +16,6 @@ public interface A {
     public ActionListener point();
     public ActionListener e();
     public ActionListener pi();
+    public ActionListener openParen();
+    public ActionListener closeParen();
 }
