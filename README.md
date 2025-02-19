@@ -1,4 +1,4 @@
-# Group 2 Assignment work
+# Group 1 Assignment work
 ## Members
 Brandon Musyoka		  
 Mukisa Lore	 		     
