@@ -854,6 +854,7 @@ public class Calculator2{
         textField.setFont(new Font("Arial", Font.PLAIN, 80));
         textField.setHorizontalAlignment(SwingConstants.RIGHT);
         textField.setForeground(Color.WHITE);
+        textField.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         textField.setBackground(new Color(32, 33, 34));
         textField.enable();
         textField.setEditable(true);
