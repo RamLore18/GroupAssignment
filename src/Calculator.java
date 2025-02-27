@@ -737,7 +737,7 @@ public class Calculator extends Calc{
         if(! "0".equals(textField1.getText())) {
             textField1.setText(textField1.getText()+"∛");
         }else {
-            textField1.setText("∛");
+            textField1.setText("³√");
         }
         expression+=",cbrt";
         num=false;

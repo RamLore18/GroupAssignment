@@ -685,9 +685,9 @@ public class Calculator2{
     }
     public static ActionListener cbrt(){
         if(! "0".equals(textField.getText())) {
-            textField.setText(textField.getText()+"∛");
+            textField.setText(textField.getText()+"³√");
         }else {
-            textField.setText("∛");
+            textField.setText("³√");
         }
         expression+=",cbrt";
         num=false;
