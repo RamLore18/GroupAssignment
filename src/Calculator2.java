@@ -793,7 +793,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public ActionListener EE(){
+    public static ActionListener EE(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"Mod");
         }else {
@@ -883,7 +883,7 @@ public class Calculator2{
         String[] buttons = {"(", ")", "mc", "m+", "m-", "mr", "C", "+/-", "%", "÷",
                 "2nd", "x²", "x³", "xʸ", "eˣ", "10ˣ", "7", "8", "9", "X",
                 "1/x", "²√x", "³√x", "ʸ√x", "ln", "log", "4", "5", "6", "-",
-                "x!", "sin", "cos", "tan", "e", "EE", "1", "2", "3", "+",
+                "x!", "sin", "cos", "tan", "e", "Mod", "1", "2", "3", "+",
                 "Rad", "sinh", "cosh", "tanh", "π", "Rand", "0", ".", "DEL", "="};
 
         Color specialBackground1 = new Color(95, 96, 98);
@@ -1045,6 +1045,9 @@ public class Calculator2{
                 break;
             case "e":
                 e();
+                break;
+            case "Mod":
+                EE();
                 break;
             case "x!":
                 if(! "0".equals(textField.getText())) {
