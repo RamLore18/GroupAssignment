@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -74,7 +76,7 @@ public class Calculator extends Calc{
 
     }
 
-    int precedence(String x)
+    int precedence(@NotNull String x)
     {
         int p=10;
         switch(x) {
