@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import static com.sun.java.accessibility.util.AWTEventMonitor.addActionListener;
-
-public class Calculator2{
+public class calculator2 extends Calc{
 
     public static JTextField textField = new JTextField();
+    private static JFrame panel = new JFrame();
     private static String expression = "";
     private static boolean num = false;
     private static boolean dot = false;
@@ -18,8 +17,17 @@ public class Calculator2{
     private static ArrayList<String> token = new ArrayList<String>();
     private static String result = "";
 
+
+
+    public static void main(String[] args) {
+        //Create the frame
+        JFrame frame = new JFrame("Calculator GROUP 1 Handmade GUI");
+        frame.setContentPane(new calculator2().panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+    }
     //factorial calculation
-    public static double factorial(double y) {
+    public double factorial(double y) {
         double fact=1;
         if(y==0 || y==1) {
             fact=1;
@@ -31,7 +39,7 @@ public class Calculator2{
         return fact;
     }
 
-    static int precedence(String x) {
+    int precedence(String x) {
         int p = 10;
         switch (x) {
             case "+":
@@ -58,7 +66,7 @@ public class Calculator2{
     }
 
     //operator checking
-    private static boolean isoperator(String x) {
+    private boolean isoperator(String x) {
         if (List.of("+", "-", "x", "/", "sqrt", "^", "!", "sin", "cos", "tan", "ln", "log", "sinh", "cosh", "tanh", "%", "Rad", "Mod", "cbrt", "aroot", "exp", "pow", "10^", "Del", "1/", "^2", "^3").contains(x))
             return true;
         else
@@ -66,7 +74,7 @@ public class Calculator2{
     }
 
     //infix to postfix conversion
-    private static String infixTopostfix() {
+    private String infixTopostfix() {
         Stack<String> s = new Stack<String>();
         String y;
         int flag;
@@ -108,7 +116,7 @@ public class Calculator2{
 
 
     //for actual calculation with binary operators
-    private static double calculate(double x, double y, String c) {
+    private double calculate(double x, double y, String c) {
         double res = 0;
         switch (c) {
             case "-":
@@ -139,7 +147,7 @@ public class Calculator2{
     }
 
     //calculation with unary operators
-    private static double calculate(double y, String c) {
+    private double calculate(double y, String c) {
         double res = 0;
         switch (c) {
             case "log":
@@ -200,7 +208,7 @@ public class Calculator2{
         return res;
     }
 
-    private static double Eval(String p) {
+    private double Eval(String p) {
         String tokens[] = p.split(",");
         ArrayList<String> token2 = new ArrayList<String>();
         for (int i = 0; i < tokens.length; i++) {
@@ -240,7 +248,7 @@ public class Calculator2{
     }
 
     //actual combined method for calculation
-    private static void calculateMain() {
+    private void calculateMain() {
         String tokens[] = expression.split(",");
         for (int i = 0; i < tokens.length; i++) {
             if (!tokens[i].equals("") && !tokens[i].equals(" ") && !tokens[i].equals("\n") && !tokens[i].equals("  ")) {
@@ -254,7 +262,7 @@ public class Calculator2{
         }
     }
 
-    public static ActionListener zero() {
+    public ActionListener zero() {
         if (!"0".equals(textField.getText())) {
             textField.setText(textField.getText() + "0");
         } else {
@@ -268,7 +276,7 @@ public class Calculator2{
         num = true;
         return null;
     }
-    public static ActionListener one(){
+    public ActionListener one(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"1");
         }else {
@@ -282,7 +290,7 @@ public class Calculator2{
         num=true;
         return null;
     }
-    public static ActionListener two(){
+    public ActionListener two(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"2");
         }else {
@@ -296,7 +304,7 @@ public class Calculator2{
         num=true;
         return null;
     }
-    public static ActionListener three(){
+    public ActionListener three(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"3");
         }else {
@@ -310,7 +318,7 @@ public class Calculator2{
         num=true;
         return null;
     }
-    public static ActionListener four(){
+    public ActionListener four(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"4");
         }else {
@@ -324,7 +332,7 @@ public class Calculator2{
         num=true;
         return null;
     }
-    public static ActionListener five(){
+    public ActionListener five(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"5");
         }else {
@@ -338,7 +346,7 @@ public class Calculator2{
         num=true;
         return null;
     }
-    public static ActionListener six(){
+    public ActionListener six(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"6");
         }else {
@@ -352,7 +360,7 @@ public class Calculator2{
         num=true;
         return null;
     }
-    public static ActionListener seven(){
+    public ActionListener seven(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"7");
         }else {
@@ -366,7 +374,7 @@ public class Calculator2{
         num=true;
         return null;
     }
-    public static ActionListener eight(){
+    public ActionListener eight(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"8");
         }else {
@@ -380,7 +388,7 @@ public class Calculator2{
         num=true;
         return null;
     }
-    public static ActionListener nine(){
+    public ActionListener nine(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"9");
         }else {
@@ -394,7 +402,7 @@ public class Calculator2{
         num=true;
         return null;
     }
-    public static ActionListener point(){
+    public ActionListener point(){
         String s=textField.getText();
         if(s.charAt(s.length()-1)!= '.') {
             if(num && dot==false) {
@@ -410,7 +418,7 @@ public class Calculator2{
         textField.setText(s);
         return null;
     }
-    public static ActionListener openParen(){
+    public ActionListener openParen(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"(");
         }else {
@@ -421,7 +429,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener closeParen(){
+    public ActionListener closeParen(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+")");
         }else {
@@ -434,7 +442,7 @@ public class Calculator2{
     }
     //Interface B methods.
     // All functional
-    public static ActionListener addition() {
+    public ActionListener addition() {
         String s=textField.getText();
         if(s.equals("0")) {
             expression+="0";
@@ -456,7 +464,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener subtract() {
+    public ActionListener subtract() {
         String s=textField.getText();
         if(s.equals("0")) {
             expression+="0";
@@ -478,7 +486,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener multiply() {
+    public ActionListener multiply() {
 
         String s=textField.getText();
         if(s.equals("0")) {
@@ -501,7 +509,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener divide() {
+    public ActionListener divide() {
         String s=textField.getText();
         if(s.equals("0")) {
             expression+="0";
@@ -521,7 +529,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener percent() {
+    public ActionListener percent() {
         String s=textField.getText();
         if(s.equals("0")) {
             expression+="0";
@@ -543,7 +551,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener equals() {
+    public ActionListener equals() {
         calculateMain();
         String s="";
         token.remove(token.size()-1);
@@ -570,7 +578,7 @@ public class Calculator2{
     // Interface C methods.
     // Will have to fix the trig functions in time.Done
     //Hyperbolic Trig functions are functional.
-    public static ActionListener sin(){
+    public ActionListener sin(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"sin(");
         }else {
@@ -581,7 +589,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener cos(){
+    public ActionListener cos(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"cos(");
         }else {
@@ -592,7 +600,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener tan(){
+    public ActionListener tan(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"tan(");
         }else {
@@ -603,7 +611,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener sinh(){
+    public ActionListener sinh(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"sinh(");
         }else {
@@ -614,7 +622,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener tanh(){
+    public ActionListener tanh(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"tanh(");
         }else {
@@ -625,7 +633,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener cosh(){
+    public ActionListener cosh(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"cosh(");
         }else {
@@ -638,7 +646,7 @@ public class Calculator2{
     }
     //Interface D methods. All functional
     //COMPLETED
-    public static ActionListener power() {
+    public ActionListener power() {
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"^");
             expression+=",^";
@@ -650,7 +658,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener pi(){
+    public ActionListener pi(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+Character.toString((char)960));
         }else {
@@ -661,7 +669,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener e(){
+    public ActionListener e(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"e");
         }else {
@@ -672,7 +680,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener sqrt(){
+    public ActionListener sqrt(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+Character.toString((char)8730));
         }else {
@@ -683,7 +691,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener cbrt(){
+    public ActionListener cbrt(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"³√");
         }else {
@@ -694,7 +702,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener root(){
+    public ActionListener root(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+Character.toString((char)8730));
         }else {
@@ -705,7 +713,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener pow10(){
+    public ActionListener pow10(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"10^");
         }else {
@@ -716,7 +724,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener square(){
+    public ActionListener square(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"^2");
         }else {
@@ -727,7 +735,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener cube(){
+    public ActionListener cube(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"^3");
         }else {
@@ -740,7 +748,7 @@ public class Calculator2{
     }
     //Interface E methods.
     // All functional
-    public static ActionListener rand(){
+    public ActionListener rand(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"Rand");
         }else {
@@ -749,7 +757,7 @@ public class Calculator2{
         expression+= Math.random();
         return null;
     }
-    public static ActionListener log(){
+    public ActionListener log(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"log(");
         }else {
@@ -760,7 +768,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener ln(){
+    public ActionListener ln(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"ln(");
         }else {
@@ -771,7 +779,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener exp(){
+    public ActionListener exp(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"exp(");
         }else {
@@ -782,7 +790,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener rad(){
+    public ActionListener rad(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"Rad(");
         }else {
@@ -804,7 +812,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener C(){
+    public ActionListener C(){
         textField.setText("");
         expression ="";
         token.clear();
@@ -813,7 +821,7 @@ public class Calculator2{
         dot=false;
         return null;
     }
-    public static ActionListener Del(){
+    public ActionListener Del(){
         String s=textField.getText();
         if(s.length()>0) {
             if(s.charAt(s.length()-1)=='.') {
@@ -827,7 +835,7 @@ public class Calculator2{
         }
         return null;
     }
-    public static ActionListener Rec(){
+    public ActionListener Rec(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"1/");
         }else {
@@ -839,16 +847,9 @@ public class Calculator2{
         return null;
     }
 
-
-    public static void main(String[] args) {
-        //Create the frame
-        JFrame frame = new JFrame("Calculator GROUP 1 Handmade GUI");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    public calculator2() {
         //frame.setResizable(false);
-        frame.setSize(800, 500);
-
-
-        //Create the display field
+        panel.setSize(800, 500);
         textField.setSize(150, 123);
         textField.setPreferredSize(new Dimension(150, 170));
         textField.setFont(new Font("Arial", Font.PLAIN, 80));
@@ -858,12 +859,13 @@ public class Calculator2{
         textField.setBackground(new Color(32, 33, 34));
         textField.enable();
         textField.setEditable(true);
-        frame.add(textField, BorderLayout.NORTH);
+        panel.add(textField, BorderLayout.NORTH);
 
         //Creating button layout
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayout(5, 10, 2, 2));
         buttonPanel.setBackground(new Color(32, 33, 34));
+
 
         JPanel scPanel = new JPanel();
         scPanel.setLayout(new GridLayout(5, 5, 6, 6));
@@ -877,6 +879,8 @@ public class Calculator2{
         bodPanel.setLayout(new GridLayout(5, 5, 1, 1));
         bodPanel.setBackground(Color.GRAY);
 
+        panel.add(buttonPanel, BorderLayout.CENTER);
+        panel.setVisible(true);
 
         //Create the buttons
 
@@ -889,6 +893,7 @@ public class Calculator2{
         Color specialBackground1 = new Color(95, 96, 98);
         Color specialBackground2 = new Color(205, 149, 33);
         Color specialBackground3 = new Color(52, 54, 57);
+
 
         for (String buttonlbl : buttons) {
             JButton button = new JButton(buttonlbl);
@@ -914,11 +919,9 @@ public class Calculator2{
                 buttonPanel.add(button);
             }
 
-            frame.add(buttonPanel, BorderLayout.CENTER);
-            frame.setVisible(true);
         }
 
-    private static void handleButtonClick(String buttonlbl) {
+    private void handleButtonClick(String buttonlbl) {
         switch (buttonlbl) {
             case "0":
                 zero();
