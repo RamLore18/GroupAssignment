@@ -801,7 +801,7 @@ public class calculator2 extends Calc{
         dot=false;
         return null;
     }
-    public static ActionListener EE(){
+    public ActionListener EE(){
         if(! "0".equals(textField.getText())) {
             textField.setText(textField.getText()+"Mod");
         }else {
